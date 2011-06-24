@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>MIX - MFI's in Nigeria</title>
+  <title>MIX | Microfinance in Nigeria</title>
    <script src='scripts/jquery-1.6.1.min.js' type='text/javascript'></script>
    <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
    <script src='scripts/wax.mm.min.js' type='text/javascript'></script>
@@ -17,8 +17,7 @@
   <div class="top">
   </div>
   <div class='header'>
-    <div style="float:left;"><a href='http://www.mixmarket.org' class='logoL'>Microfinance Information eXchange</a></div>
-    <!--<div style="float:right;"><a href='http://www.mastercard.com' class='logoR'>MasterCard</a></div>-->
+    <div style="float:left;"><a href='http://www.themix.org' class='logoL'>Microfinance Information eXchange</a></div>
   </div>
   
   <div class='about'>
@@ -63,7 +62,7 @@
                     'http://b.tiles.mapbox.com/mix/',
                     'http://c.tiles.mapbox.com/mix/',
                     'http://d.tiles.mapbox.com/mix/'],
-          layerName: 'world-blank,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_MFIs',
+          layerName: 'world-blank,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_Sharialine,MIX_Nigeria_MFIs',
           zoomRange: [4, 8]}),
           null,
           [
@@ -91,6 +90,7 @@
               'world-blank',
               this.id,
               'world-borders-dark',
+              'MIX_Nigeria_Sharialine',
               'MIX_Nigeria_MFIs'].join(','),
           filetype: '.png',
           zoomRange: [4, 8]
