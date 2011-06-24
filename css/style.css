@@ -185,7 +185,7 @@ ul.layers li a {
 	padding:12px 5px 12px 50px;
 }
 
-ul.layers li a:active {
+ul.layers li a:active, ul.layers li a.active {
 	background:#222;
 	color:#ddd;
 	padding-left:40px;
