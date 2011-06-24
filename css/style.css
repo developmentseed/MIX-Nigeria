@@ -188,7 +188,8 @@ ul.layers li a {
 ul.layers li a:active, ul.layers li a.active {
 	background:#222;
 	color:#ddd;
-	padding-left:40px;
+	padding-left:32px;
+	border-left:8px solid #5593B8;
 }
   
 .partners {

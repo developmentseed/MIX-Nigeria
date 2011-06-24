@@ -62,7 +62,7 @@
                     'http://b.tiles.mapbox.com/mix/',
                     'http://c.tiles.mapbox.com/mix/',
                     'http://d.tiles.mapbox.com/mix/'],
-          layerName: 'world-blank,world-urban-areas,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_Sharialine,MIX_Nigeria_MFIs',
+          layerName: 'world-blank,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_Sharialine,MIX_Nigeria_MFIs',
           zoomRange: [4, 8]}),
           null,
           [
@@ -88,7 +88,7 @@
               'http://d.tiles.mapbox.com/mix/'],
           layerName: [
               'world-blank',
-              'world-urban-areas',
+
               this.id,
               'world-borders-dark',
               'MIX_Nigeria_Sharialine',
