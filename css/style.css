@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family:NewsGothic;
   src:url('../fonts/NewsGothic-Book-webfont.ttf');
   }
@@ -7,7 +7,7 @@
   font-family:NewsGothic;
   font-weight:bold;
   src:url('../fonts/NewsGothic-DemiBold-webfont.ttf');
-  }
+  }*/
 
 body {
   font:16px/20px NewsGothic,Arial,sans-serif;
@@ -29,8 +29,7 @@ a {
  */
 .top,
 .header,
-.footer,
-.about {
+.footer {
   position:fixed;
   z-index:1;
   }
@@ -41,6 +40,7 @@ a {
 	right:0px;
 	background:url(../images/mixsprite.png) 0px -190px repeat-x;
 	height:30px;
+	z-index:3;
 }
 
 .header,
@@ -131,23 +131,34 @@ ul.legend li {
 h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
 
 .about {
+	position:relative;
+	float: right;
   top:72px;
-  right:0px;
-  bottom:0px;
+  /*right:0px;
+  bottom:0px;*/
   width:300px;
   background:#f2f2f2;
-  padding:40px 40px 40px 20px;
+  padding:30px 40px 40px 20px;
   border-left:2px solid #ccc;
+  height: 452px;
+  z-index:1;
   }
-
+  
 .about p {
-	line-height: 1.4em;
+	line-height:1.4em;
 }
 
 .about p a:hover {
 	text-decoration: underline;
-} 
- 
+	} 
+  
+.more {
+	margin-top:15px;
+  font-size:12px;
+  text-transform:uppercase;
+  font-weight:bold;
+  }
+  
 .layerswitch {
 	position:fixed;
 	bottom:94px;
@@ -174,7 +185,7 @@ ul.layers li a {
 	padding:12px 5px 12px 50px;
 }
 
-ul.layers li a:active, ul.layers li a.active {
+ul.layers li a:active {
 	background:#222;
 	color:#ddd;
 	padding-left:40px;
@@ -192,6 +203,7 @@ ul.layers li a:active, ul.layers li a.active {
 	padding:10px;
 	background:#ddd;
 	border-top:1px solid #ccc;
+	border-left:2px solid #ccc;
 }
 
 .parttop {
@@ -250,8 +262,9 @@ h3 {
 }
 
 .wax-tooltip {
-	/*max-width: 300px !important;
-	width: 300px !important;
+	postition:fixed !important;
+	max-width: 100% !important;
+	/*width: 300px !important;
 	max-height:800px !important;*/
 	top:80px !important;
 	right:370px !important;

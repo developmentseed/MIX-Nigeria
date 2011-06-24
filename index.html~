@@ -24,7 +24,7 @@
       <h2>Microfinance in Nigeria</h2>
       <p>Visitors can view distribution of Microfinance Institutions (MFIs) throughout Nigeria at the state level while switching between several overlays of socio-economic data for further context.</p>
 	   <p class='more'>
-	   		<a href="#">&raquo; Put your MFI on the map here.</a>
+	   		&raquo; Put your MFI on the map here.
 	   </p>
       <div class="layerswitch">
         <ul class="layers">
