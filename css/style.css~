@@ -1,0 +1,270 @@
+@font-face {
+  font-family:NewsGothic;
+  src:url('../fonts/NewsGothic-Book-webfont.ttf');
+  }
+
+@font-face {
+  font-family:NewsGothic;
+  font-weight:bold;
+  src:url('../fonts/NewsGothic-DemiBold-webfont.ttf');
+  }
+
+body {
+  font:16px/20px NewsGothic,Arial,sans-serif;
+  color:#222;
+  background:#ccc;
+  margin:0px;
+  padding:0px;
+  height:100%;
+  }
+
+a {
+  color:#222;
+  font-weight:bold;
+  text-decoration:none;
+  }
+
+/**
+ * Header, footer, about wrappers
+ */
+.top,
+.header,
+.footer,
+.about {
+  position:fixed;
+  z-index:1;
+  }
+  
+.top {
+	top:0px;
+	left:0px;
+	right:0px;
+	background:url(../images/mixsprite.png) 0px -190px repeat-x;
+	height:30px;
+}
+
+.header,
+.footer {
+  z-index:3;
+  box:shadow::#999 0px 0px 5px;
+  -moz-box-shadow:#999 0px 0px 5px;
+  -webkit-box-shadow:#999 0px 0px 5px;
+  }
+
+.header {
+  top:30px;
+  left:0px;
+  right:0px;
+  background:#fdfffc;
+  padding:0px 10px;
+  height:42px;
+  line-height:42px;
+  }
+
+a.logoL {
+  display:block;
+  width:290px;
+  height:40px;
+  background:url(../images/mix_logo_new.png) 0px 0px no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+  margin:1px 0px;
+  }
+  
+a.logoR {
+  display:block;
+  width:83px;
+  height:50px;
+  background:url(../images/logo_mc.png) 0px 0px no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+  margin:5px 0px;
+  }
+  
+/**
+ * Legend
+ */
+#legend {
+	z-index:2;
+	position:fixed;
+	left:10px;
+	bottom:35px;
+	width:215px;
+	height:195px;
+	background:url(../images/oti_legend2.png);
+	box:shadow::#999 2px 2px 5px;
+   -moz-box-shadow:#999 2px 2px 5px;
+   -webkit-box-shadow:#999 2px 2px 5px;
+   padding:10px;
+   font-size:12px;
+	}
+	
+ul.legend {
+	margin:10px;
+}
+	
+ul.legend li {
+	padding-top:10px;
+}
+
+.legcolor {
+	float:left;
+	width:35px;
+	height:20px;
+	margin-right:10px;
+	border:1px solid #999;
+}
+
+.footer {
+  font:13px/15px NewsGothic,Arial,sans-serif;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background:url(../images/sprite.png) 0px -250px repeat-x;
+  padding:10px 15px;
+  height:30px;
+  }
+
+/**
+ * About text and formatting
+ */
+h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
+
+.about {
+  top:72px;
+  right:0px;
+  bottom:0px;
+  width:300px;
+  background:#f2f2f2;
+  /*background:url(../images/aboutmask.png);*/
+  padding:40px 40px 40px 20px;
+  border-left:2px solid #ccc;
+  }
+  
+.para {
+	
+}
+  
+.layerswitch {
+	position:fixed;
+	bottom:94px;
+	right:0px;
+	height:205px;
+	width:360px;
+}
+
+ul.layers {
+	width:100%;
+}
+
+ul.layers li {
+	list-style:none;
+	background-color:#fdfffc;
+	border-top:1px solid #ccc;
+}
+
+ul.layers li a {
+	display:block;
+	text-decoration:none;
+	color:#333;
+	font-size:16px;
+	padding:12px 5px 12px 50px;
+}
+
+ul.layers li a:active {
+	background:#222;
+	color:#ddd;
+	padding-left:40px;
+}
+  
+.partners {
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	height:52px;
+	width:340px;
+	text-align:center;
+	font-size:11px;
+	color:#444;
+	padding:10px;
+	background:#ddd;
+	border-top:1px solid #ccc;
+}
+
+.parttop {
+	text-align:left;
+	font-weight:bold;
+	font-style:italic;
+	padding-left:16px;
+	height:14px;
+	font-size:12px;
+}
+
+.partimg {
+	vertical-align:text-top;
+}
+
+h2 {
+  font-weight:normal;
+  line-height:26px;
+  font-size:26px;
+  color:#05a;
+  /*color:#c33;*/
+  margin-bottom:15px;
+  }
+  
+h3 {
+	font-weight:bold;
+	font-size:14;
+	color:#333;
+}
+
+.ts-map {
+ position: fixed !important;
+ top: 0 !important;
+ right: 0 !important;
+ bottom: 0 !important;
+ left: 0 !important;
+ height: 100% !important;
+ width: 100% !important; 
+}
+
+.map {
+  position:fixed !important;
+  height:100% !important;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  /*background:url(../images/tempbg.png);*/
+  }
+
+/**
+ * Zoom controls
+ */
+.zoomer {
+	top:82px !important;
+}
+
+.wax-tooltip {
+	/*max-width: 300px !important;
+	width: 300px !important;
+	max-height:800px !important;*/
+	top:80px !important;
+	right:370px !important;
+	height: 100&;
+	box:shadow::#999 2px 2px 5px !important;
+   -moz-box-shadow:#999 2px 2px 5px !important;
+   -webkit-box-shadow:#999 2px 2px 5px !important;
+}
+.wax-tooltip div {
+	width: 100% !important;
+}
+
+.wax-legends {
+	position:fixed !important;
+	left:10px !important;
+	bottom:10px !important;
+	max-width:250px !important;
+}
+

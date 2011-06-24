@@ -1,75 +1,98 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <meta charset='utf-8'>
-
-  <title>developmentseed/MIX-Nigeria @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #c5e4ab;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #3a1b54; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #3a1b54; }
-    h3 { text-align: center; color: #3a1b54; }
-    a { color: #3a1b54; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>MIX - MFI's in Nigeria</title>
+   <script src='scripts/jquery-1.6.1.min.js' type='text/javascript'></script>
+   <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
+   <script src='scripts/wax.mm.min.js' type='text/javascript'></script>
+   <link href='css/controls.css' rel='stylesheet' type='text/css'/>
+   <link rel='stylesheet' href='css/reset.css' type='text/css'/>
+   <link rel='stylesheet' href='css/style.css' type='text/css'/>
 </head>
 
 <body>
-  <a href="http://github.com/developmentseed/MIX-Nigeria"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/developmentseed/MIX-Nigeria/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/developmentseed/MIX-Nigeria/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/developmentseed/MIX-Nigeria">MIX-Nigeria</a>
-      <span class="small">by <a href="http://github.com/developmentseed">developmentseed</a></span></h1>
-
-    <div class="description">
-      
-    </div>
-
-    <h2>Contact</h2>
-<p>Development Seed (info@developmentseed.org)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/developmentseed/MIX-Nigeria/zipball/master">zip</a> or
-      <a href="http://github.com/developmentseed/MIX-Nigeria/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/developmentseed/MIX-Nigeria</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/developmentseed/MIX-Nigeria">developmentseed/MIX-Nigeria</a>
-    </div>
-
+  <div class="top">
   </div>
-
+  <div class='header'>
+    <div style="float:left;"><a href='http://www.mixmarket.org' class='logoL'>Microfinance Information eXchange</a></div>
+    <!--<div style="float:right;"><a href='http://www.mastercard.com' class='logoR'>MasterCard</a></div>-->
+  </div>
   
+  <div class='about'>
+      <h2>Microfinance in Nigeria</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada lorem sed tellus porttitor eleifend. Etiam rutrum, velit ut cursus aliquam, tortor magna aliquam neque, quis dictum augue nisl sed dolor. Sed mollis lorem quis sapien pretium iaculis. Aenean et vestibulum nunc.</p>
+      <p class='more'>
+          <a href='http://www.mixmarket.org/mfi/country/Nigeria'>Learn more &raquo;</a>
+      </p>
+      <div class="layerswitch">
+        <ul class="layers">
+        <li><a id="MIX_Nigeria_Population2006" href="#">Population</a></li>
+        <li><a id="MIX_Nigeria_InternetAccess" href="#">Internet Access</a></li>
+        <li><a id="MIX_Nigeria_MobileAccess" href="#">Mobile Access</a></li>
+        <li><a id="MIX_Nigeria_LiteracyRates" href="#">Literacy Rates</a></li>
+        <li><a id="MIX_Nigeria_Unemployment" href="#">Unemployment</a></li>
+        </ul>
+     </div>
+      <div class="partners">
+        <div class="parttop">A project of MIX</div>
+      
+      in partnership with:&nbsp;&nbsp;&nbsp;&nbsp;<img class="partimg" src="images/logo_mc_bw2.png" alt="mastercard" align="middle" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="partimg" src="images/logo_ds_bw2.png" alt="development seed" />
+      </div>
+  </div>
+  
+  <div id='map'>
+  </div>
+  
+  <script type="text/javascript">
+    //global vars
+    var m,
+        mm = com.modestmaps;
+    
+    $(function() {
+      // Default active class to population
+      $('a#MIX_Nigeria_Population2006').addClass('active'); 
+      
+      // Build map
+      m = new mm.Map('map',
+          new wax.mm.provider({
+          baseUrl: ['http://a.tiles.mapbox.com/mix/',
+                    'http://b.tiles.mapbox.com/mix/',
+                    'http://c.tiles.mapbox.com/mix/',
+                    'http://d.tiles.mapbox.com/mix/'],
+          layerName: 'world-blank,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_MFIs',
+          zoomRange: [4, 8]}),
+         null,
+          [
+            new mm.DragHandler,
+            new mm.DoubleClickHandler,
+            new mm.TouchHandler,
+            new mm.MouseWheelHandler
+         ]);
+      wax.mm.interaction(m);
+      wax.mm.zoomer(m);
+      wax.mm.zoombox(m);
+      wax.mm.legend(m);
+      m.setCenterZoom(new mm.Location(9,11), 6);
+    });
+     
+    $('.layers li a').click(function() {
+       // Layer switcher
+       var prefix = 'world-blank,',
+           suffix = ',world-borders-dark,MIX_Nigeria_MFIs';  
+       m.setProvider(new wax.mm.provider({
+         baseUrl: ['http://a.tiles.mapbox.com/mix/',
+                  'http://b.tiles.mapbox.com/mix/',
+                  'http://c.tiles.mapbox.com/mix/',
+                  'http://d.tiles.mapbox.com/mix/'],
+         layerName: prefix+this.id+suffix,
+         filetype: '.png',
+         zoomRange: [4, 8]}));
+      $('.layers li a').removeClass('active');
+      $(this).addClass('active');
+    });
+  </script>
 </body>
 </html>
