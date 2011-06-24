@@ -136,15 +136,18 @@ h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
   bottom:0px;
   width:300px;
   background:#f2f2f2;
-  /*background:url(../images/aboutmask.png);*/
   padding:40px 40px 40px 20px;
   border-left:2px solid #ccc;
   }
-  
-.para {
-	
+
+.about p {
+	line-height: 1.4em;
 }
-  
+
+.about p a:hover {
+	text-decoration: underline;
+} 
+ 
 .layerswitch {
 	position:fixed;
 	bottom:94px;
