@@ -49,7 +49,8 @@
   <script type="text/javascript">
     //global vars
     var m,
-        mm = com.modestmaps;
+      legend,
+      mm = com.modestmaps;
     
     $(function() {
       // Default active class to population
@@ -64,7 +65,7 @@
                     'http://d.tiles.mapbox.com/mix/'],
           layerName: 'world-blank,MIX_Nigeria_Population2006,world-borders-dark,MIX_Nigeria_MFIs',
           zoomRange: [4, 8]}),
-         null,
+          null,
           [
             new mm.DragHandler,
             new mm.DoubleClickHandler,
@@ -74,22 +75,36 @@
       wax.mm.interaction(m);
       wax.mm.zoomer(m);
       wax.mm.zoombox(m);
-      wax.mm.legend(m);
+      legend = wax.mm.legend(m);
       m.setCenterZoom(new mm.Location(9,11), 6);
     });
      
     $('.layers li a').click(function() {
-       // Layer switcher
-       var prefix = 'world-blank,',
-           suffix = ',world-borders-dark,MIX_Nigeria_MFIs';  
-       m.setProvider(new wax.mm.provider({
-         baseUrl: ['http://a.tiles.mapbox.com/mix/',
-                  'http://b.tiles.mapbox.com/mix/',
-                  'http://c.tiles.mapbox.com/mix/',
-                  'http://d.tiles.mapbox.com/mix/'],
-         layerName: prefix+this.id+suffix,
-         filetype: '.png',
-         zoomRange: [4, 8]}));
+      // Layer switcher
+      m.setProvider(new wax.mm.provider({
+          baseUrl: [
+              'http://a.tiles.mapbox.com/mix/',
+              'http://b.tiles.mapbox.com/mix/',
+              'http://c.tiles.mapbox.com/mix/',
+              'http://d.tiles.mapbox.com/mix/'],
+          layerName: [
+              'world-blank',
+              this.id,
+              'world-borders-dark',
+              'MIX_Nigeria_MFIs'].join(','),
+          filetype: '.png',
+          zoomRange: [4, 8]
+      }));
+
+      // Re-render the legend with the new tileset.
+      legend.legend.render([
+          m.provider.getTileUrl({
+              zoom: 0,
+              column: 0,
+              row: 0
+          })
+      ]);
+
       $('.layers li a').removeClass('active');
       $(this).addClass('active');
     });
