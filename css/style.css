@@ -131,17 +131,16 @@ ul.legend li {
 h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
 
 .about {
-	position:relative;
-	float: right;
+	position:absolute;
   top:72px;
-  /*right:0px;
-  bottom:0px;*/
+  right:0px;
+  bottom:0px;
   width:300px;
   background:#f2f2f2;
   padding:30px 40px 40px 20px;
   border-left:2px solid #ccc;
-  height: 452px;
   z-index:1;
+  overflow: hidden;
   }
   
 .about p {
