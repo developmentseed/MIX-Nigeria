@@ -131,17 +131,16 @@ ul.legend li {
 h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
 
 .about {
-	position:relative;
-	float: right;
+	position:absolute;
   top:72px;
-  /*right:0px;
-  bottom:0px;*/
+  right:0px;
+  bottom:0px;
   width:300px;
   background:#f2f2f2;
   padding:30px 40px 40px 20px;
   border-left:2px solid #ccc;
-  height: 452px;
   z-index:1;
+  overflow: hidden;
   }
   
 .about p {
@@ -161,7 +160,7 @@ h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
   
 .layerswitch {
 	position:fixed;
-	bottom:94px;
+	bottom:106px;
 	right:0px;
 	height:205px;
 	width:360px;
@@ -189,35 +188,61 @@ ul.layers li a:active, ul.layers li a.active {
 	background:#222;
 	color:#ddd;
 	padding-left:32px;
-	border-left:8px solid #449ECB;
+	border-left:8px solid #5593B8;
 }
   
 .partners {
 	position:fixed;
-	bottom:0px;
+	bottom:22px;
 	right:0px;
-	height:52px;
+	height:45px;
 	width:340px;
 	text-align:center;
 	font-size:11px;
 	color:#444;
-	padding:10px;
+	padding:15px 10px 10px 10px;
 	background:#ddd;
 	border-top:1px solid #ccc;
 	border-left:2px solid #ccc;
 }
 
-.parttop {
-	text-align:left;
-	font-weight:bold;
-	font-style:italic;
+.partL {
+	float:left;
+	text-align:right;
 	padding-left:16px;
-	height:14px;
-	font-size:12px;
+	line-height:14px;
 }
 
+.projectof {
+	font-weight:bold;
+	font-style:italic;
+	font-size:12px;
+	}
+	
+
 .partimg {
-	vertical-align:text-top;
+	float:right;
+	padding-right:25px;
+}
+
+.tmlink {
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	width:312px;
+	height:27px;
+	border-left:2px solid #ccc;
+	border-top:1px solid #ccc;
+	font-size:10px;
+	color:#888;
+	text-align:right;
+	padding:3px 38px 0px 10px;
+	background:#eee;
+	line-height:12px;
+}
+
+.tmlink a {
+	color:#444;
 }
 
 h2 {
