@@ -234,15 +234,15 @@ ul.layers li a:active, ul.layers li a.active {
 	border-left:2px solid #ccc;
 	border-top:1px solid #ccc;
 	font-size:10px;
-	color:#888;
+	color:#999;
 	text-align:right;
 	padding:3px 38px 0px 10px;
-	background:#eee;
+	background:#ddd;
 	line-height:12px;
 }
 
 .tmlink a {
-	color:#444;
+	color:#888;
 }
 
 h2 {
