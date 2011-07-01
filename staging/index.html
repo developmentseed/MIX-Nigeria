@@ -29,13 +29,19 @@
 	   		<a href="#">&raquo; Put your MFI on the map here.</a>
 	   </p>
       <div class="layerswitch">
+        <div class="status-switch">
+          <label for="status-select">Select a License Status:</label>
+          <select id="status-select">
+            <option id="mix-nigeria-mfi-licensed">Licensed</option>
+            <option id="mix-nigeria-mfi-revoked">Revoked</option>
+          </select>
+        </div>
         <ul class="layers">
         <li><a id="MIX_Nigeria_Population2006" href="#">Population</a></li>
         <li><a id="MIX_Nigeria_InternetAccess" href="#">Internet Access</a></li>
         <li><a id="MIX_Nigeria_MobileAccess" href="#">Mobile Access</a></li>
         <li><a id="MIX_Nigeria_LiteracyRates" href="#">Literacy Rates</a></li>
         <li><a id="MIX_Nigeria_Unemployment" href="#">Unemployment</a></li>
-        <li><a id="nate.natural-earth-1" href="#">Natural Earth</a></li>
         </ul>
      </div>
       <div class="partners">
@@ -58,7 +64,9 @@
     //global vars
     var m,
       legend,
-      mm = com.modestmaps;
+      mm = com.modestmaps,
+      activeStatus = 'mix-nigeria-mfi-licensed';
+      activeLayer = 'MIX_Nigeria_Population2006';
     
     $(function() {
       // Default active class to population
@@ -67,18 +75,18 @@
       // Build map
       m = new mm.Map('map',
           new wax.mm.provider({
-          baseUrl: ['http://a.staging.mapbox.com/mix/',
-                    'http://b.staging.mapbox.com/mix/',
-                    'http://c.staging.mapbox.com/mix/',
-                    'http://d.staging.mapbox.com/mix/'],
+          baseUrl: ['http://a.tiles.mapbox.com/mix/',
+                    'http://b.tiles.mapbox.com/mix/',
+                    'http://c.tiles.mapbox.com/mix/',
+                    'http://d.tiles.mapbox.com/mix/'],
           layerName: [
-              'world-blank',
+              'mapbox.world-blank-bright',
               'world-urban-areas',
               'MIX_Nigeria_Population2006',
               'Nigeria-LGA-borders',
-              'world-borders-dark',
-              'MIX_Nigeria_Sharialine',
-              'mix-nigeria-mfis'].join(','),
+              'mapbox.world-borders-dark',
+              'mix-nigeria-sharialine',
+              'mix-nigeria-mfi-licensed'].join(','),
           zoomRange: [4, 10]}),
           null,
           [
@@ -96,22 +104,22 @@
      
     $('.layers li a').click(function() {
       // Layer switcher
+      activeLayer = this.id;
       m.setProvider(new wax.mm.provider({
           baseUrl: [
-              'http://a.staging.mapbox.com/mix/',
-              'http://b.staging.mapbox.com/mix/',
-              'http://c.staging.mapbox.com/mix/',
-              'http://d.staging.mapbox.com/mix/'],
+              'http://a.tiles.mapbox.com/mix/',
+              'http://b.tiles.mapbox.com/mix/',
+              'http://c.tiles.mapbox.com/mix/',
+              'http://d.tiles.mapbox.com/mix/'],
           layerName: [
-              'world-blank',
+              'mapbox.world-blank-bright',
               'world-urban-areas',
-              this.id,
+              activeLayer,
               'Nigeria-LGA-borders',
-              'world-borders-dark',
-              'MIX_Nigeria_Sharialine',
-              'mix-nigeria-mfis'].join(','),
-          filetype: '.png',
-          zoomRange: [4, 8]
+              'mapbox.world-borders-dark',
+              'mix-nigeria-sharialine',
+              activeStatus].join(','),
+          zoomRange: [4, 10]
       }));
 
       // Re-render the legend with the new tileset.
@@ -126,6 +134,37 @@
       $('.layers li a').removeClass('active');
       $(this).addClass('active');
     });
+
+    $('#status-select').change(function() {
+      // Layer switcher
+      activeStatus = $('#status-select option:selected')[0].id;
+      m.setProvider(new wax.mm.provider({
+          baseUrl: [
+              'http://a.tiles.mapbox.com/mix/',
+              'http://b.tiles.mapbox.com/mix/',
+              'http://c.tiles.mapbox.com/mix/',
+              'http://d.tiles.mapbox.com/mix/'],
+          layerName: [
+              'mapbox.world-blank-bright',
+              'world-urban-areas',
+              activeLayer,
+              'Nigeria-LGA-borders',
+              'mapbox.world-borders-dark',
+              'mix-nigeria-sharialine',
+              activeStatus].join(','),
+          zoomRange: [4, 10]
+      }));
+
+      // Re-render the legend with the new tileset.
+      legend.legend.render([
+          m.provider.getTileUrl({
+              zoom: 0,
+              column: 0,
+              row: 0
+          })
+      ]);
+    });
+
   </script>
 </body>
 </html>
