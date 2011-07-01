@@ -1,0 +1,745 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.510416,
+          5.452364
+        ]
+      },
+      "properties": {
+        "ID": 1,
+        "Country": "NG",
+        "State": "Abia",
+        "Longitude": 7.510416,
+        "Latitude": 5.452364,
+        "Open": 16,
+        "Revoked": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.434942,
+          9.348092
+        ]
+      },
+      "properties": {
+        "ID": 3,
+        "Country": "NG",
+        "State": "Adamawa",
+        "Longitude": 12.434942,
+        "Latitude": 9.348092,
+        "Open": 7,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.840886,
+          4.917265
+        ]
+      },
+      "properties": {
+        "ID": 4,
+        "Country": "NG",
+        "State": "Akwa Ibom",
+        "Longitude": 7.840886,
+        "Latitude": 4.917265,
+        "Open": 9,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.925379,
+          6.19887
+        ]
+      },
+      "properties": {
+        "ID": 5,
+        "Country": "NG",
+        "State": "Anambra",
+        "Longitude": 6.925379,
+        "Latitude": 6.19887,
+        "Open": 68,
+        "Revoked": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.988446,
+          10.77809
+        ]
+      },
+      "properties": {
+        "ID": 6,
+        "Country": "NG",
+        "State": "Bauchi",
+        "Longitude": 9.988446,
+        "Latitude": 10.77809,
+        "Open": 11,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.104211,
+          4.774649
+        ]
+      },
+      "properties": {
+        "ID": 7,
+        "Country": "NG",
+        "State": "Bayelsa",
+        "Longitude": 6.104211,
+        "Latitude": 4.774649,
+        "Open": 1,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.754588,
+          7.3252
+        ]
+      },
+      "properties": {
+        "ID": 8,
+        "Country": "NG",
+        "State": "Benue",
+        "Longitude": 8.754588,
+        "Latitude": 7.3252,
+        "Open": 10,
+        "Revoked": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.124655,
+          11.803089
+        ]
+      },
+      "properties": {
+        "ID": 9,
+        "Country": "NG",
+        "State": "Borno",
+        "Longitude": 13.124655,
+        "Latitude": 11.803089,
+        "Open": 4,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.581712,
+          5.867128
+        ]
+      },
+      "properties": {
+        "ID": 10,
+        "Country": "NG",
+        "State": "Cross River",
+        "Longitude": 8.581712,
+        "Latitude": 5.867128,
+        "Open": 14,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.958831,
+          5.716798
+        ]
+      },
+      "properties": {
+        "ID": 11,
+        "Country": "NG",
+        "State": "Delta",
+        "Longitude": 5.958831,
+        "Latitude": 5.716798,
+        "Open": 22,
+        "Revoked": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.001906,
+          6.266024
+        ]
+      },
+      "properties": {
+        "ID": 12,
+        "Country": "NG",
+        "State": "Ebonyi",
+        "Longitude": 8.001906,
+        "Latitude": 6.266024,
+        "Open": 6,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.911798,
+          6.626568
+        ]
+      },
+      "properties": {
+        "ID": 13,
+        "Country": "NG",
+        "State": "Edo",
+        "Longitude": 5.911798,
+        "Latitude": 6.626568,
+        "Open": 17,
+        "Revoked": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.312727,
+          7.704374
+        ]
+      },
+      "properties": {
+        "ID": 14,
+        "Country": "NG",
+        "State": "Ekiti",
+        "Longitude": 5.312727,
+        "Latitude": 7.704374,
+        "Open": 12,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.420865,
+          6.533399
+        ]
+      },
+      "properties": {
+        "ID": 15,
+        "Country": "NG",
+        "State": "Enugu",
+        "Longitude": 7.420865,
+        "Latitude": 6.533399,
+        "Open": 18,
+        "Revoked": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.142597,
+          8.861535
+        ]
+      },
+      "properties": {
+        "ID": 2,
+        "Country": "NG",
+        "State": "FCT Abuja",
+        "Longitude": 7.142597,
+        "Latitude": 8.861535,
+        "Open": 45,
+        "Revoked": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.244271,
+          10.40472
+        ]
+      },
+      "properties": {
+        "ID": 16,
+        "Country": "NG",
+        "State": "Gombe",
+        "Longitude": 11.244271,
+        "Latitude": 10.40472,
+        "Open": 4,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.047594,
+          5.550382
+        ]
+      },
+      "properties": {
+        "ID": 17,
+        "Country": "NG",
+        "State": "Imo",
+        "Longitude": 7.047594,
+        "Latitude": 5.550382,
+        "Open": 28,
+        "Revoked": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.550167,
+          12.21713
+        ]
+      },
+      "properties": {
+        "ID": 18,
+        "Country": "NG",
+        "State": "Jigawa",
+        "Longitude": 9.550167,
+        "Latitude": 12.21713,
+        "Open": 6,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.699349,
+          10.35916
+        ]
+      },
+      "properties": {
+        "ID": 19,
+        "Country": "NG",
+        "State": "Kaduna",
+        "Longitude": 7.699349,
+        "Latitude": 10.35916,
+        "Open": 18,
+        "Revoked": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.513312,
+          11.736629
+        ]
+      },
+      "properties": {
+        "ID": 20,
+        "Country": "NG",
+        "State": "Kano",
+        "Longitude": 8.513312,
+        "Latitude": 11.736629,
+        "Open": 6,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.630759,
+          12.379396
+        ]
+      },
+      "properties": {
+        "ID": 21,
+        "Country": "NG",
+        "State": "Katsina",
+        "Longitude": 7.630759,
+        "Latitude": 12.379396,
+        "Open": 4,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.495051,
+          11.767516
+        ]
+      },
+      "properties": {
+        "ID": 22,
+        "Country": "NG",
+        "State": "Kebbi",
+        "Longitude": 4.495051,
+        "Latitude": 11.767516,
+        "Open": 4,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.694365,
+          7.729123
+        ]
+      },
+      "properties": {
+        "ID": 23,
+        "Country": "NG",
+        "State": "Kogi",
+        "Longitude": 6.694365,
+        "Latitude": 7.729123,
+        "Open": 18,
+        "Revoked": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.371874,
+          8.985139
+        ]
+      },
+      "properties": {
+        "ID": 24,
+        "Country": "NG",
+        "State": "Kwara",
+        "Longitude": 4.371874,
+        "Latitude": 8.985139,
+        "Open": 20,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.552153,
+          6.52252
+        ]
+      },
+      "properties": {
+        "ID": 25,
+        "Country": "NG",
+        "State": "Lagos",
+        "Longitude": 3.552153,
+        "Latitude": 6.52252,
+        "Open": 152,
+        "Revoked": 30
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.190209,
+          8.5031
+        ]
+      },
+      "properties": {
+        "ID": 26,
+        "Country": "NG",
+        "State": "Nasarawa",
+        "Longitude": 8.190209,
+        "Latitude": 8.5031,
+        "Open": 5,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.597682,
+          9.943198
+        ]
+      },
+      "properties": {
+        "ID": 27,
+        "Country": "NG",
+        "State": "Niger",
+        "Longitude": 5.597682,
+        "Latitude": 9.943198,
+        "Open": 13,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.461527,
+          7.001253
+        ]
+      },
+      "properties": {
+        "ID": 28,
+        "Country": "NG",
+        "State": "Ogun",
+        "Longitude": 3.461527,
+        "Latitude": 7.001253,
+        "Open": 40,
+        "Revoked": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.159747,
+          6.911658
+        ]
+      },
+      "properties": {
+        "ID": 29,
+        "Country": "NG",
+        "State": "Ondo",
+        "Longitude": 5.159747,
+        "Latitude": 6.911658,
+        "Open": 16,
+        "Revoked": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.535822,
+          7.534699
+        ]
+      },
+      "properties": {
+        "ID": 30,
+        "Country": "NG",
+        "State": "Osun",
+        "Longitude": 4.535822,
+        "Latitude": 7.534699,
+        "Open": 27,
+        "Revoked": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.615086,
+          8.144289
+        ]
+      },
+      "properties": {
+        "ID": 31,
+        "Country": "NG",
+        "State": "Oyo",
+        "Longitude": 3.615086,
+        "Latitude": 8.144289,
+        "Open": 40,
+        "Revoked": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.546905,
+          9.210442
+        ]
+      },
+      "properties": {
+        "ID": 32,
+        "Country": "NG",
+        "State": "Plateau",
+        "Longitude": 9.546905,
+        "Latitude": 9.210442,
+        "Open": 12,
+        "Revoked": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.908512,
+          4.880178
+        ]
+      },
+      "properties": {
+        "ID": 33,
+        "Country": "NG",
+        "State": "Rivers",
+        "Longitude": 6.908512,
+        "Latitude": 4.880178,
+        "Open": 15,
+        "Revoked": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.314454,
+          13.033425
+        ]
+      },
+      "properties": {
+        "ID": 34,
+        "Country": "NG",
+        "State": "Sokoto",
+        "Longitude": 5.314454,
+        "Latitude": 13.033425,
+        "Open": 4,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.826815,
+          8.029889
+        ]
+      },
+      "properties": {
+        "ID": 35,
+        "Country": "NG",
+        "State": "Taraba",
+        "Longitude": 10.826815,
+        "Latitude": 8.029889,
+        "Open": 3,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.430983,
+          12.30588
+        ]
+      },
+      "properties": {
+        "ID": 36,
+        "Country": "NG",
+        "State": "Yobe",
+        "Longitude": 11.430983,
+        "Latitude": 12.30588,
+        "Open": 1,
+        "Revoked": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.258666,
+          12.092731
+        ]
+      },
+      "properties": {
+        "ID": 37,
+        "Country": "NG",
+        "State": "Zamfara",
+        "Longitude": 6.258666,
+        "Latitude": 12.092731,
+        "Open": 6,
+        "Revoked": 0
+      }
+    }
+  ]
+}

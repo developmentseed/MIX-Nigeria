@@ -1,0 +1,41 @@
+{
+  "_center": {
+    "lat": 7.281422351311925,
+    "lon": 6.234054565429702,
+    "zoom": 6
+  },
+  "_format": "png",
+  "_interactivity": false,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "state.mss",
+    "lga.mss"
+  ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "http://localhost:8889/api/Library/data/files/mix-nigeria-mfi-lga.geojson",
+        "type": "ogr",
+        "layer_by_index": 0
+      },
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "id": "mfi-lga",
+      "name": "mfi-lga",
+      "class": "",
+      "geometry": "point"
+    },
+    {
+      "Datasource": {
+        "file": "http://localhost:8889/api/Library/data/files/mix-nigeria-mfi-state.geojson",
+        "type": "ogr",
+        "layer_by_index": 0
+      },
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "id": "mfi-state",
+      "name": "mfi-state",
+      "class": "",
+      "geometry": "point"
+    }
+  ],
+  "_legend": "<div class=\"mfi-legend\">\n<div class=\"legend\" style=\"font-size:80%;\">Number of MFIs</div>\n<div class=\"legend\" style=\"font-size:80%\">Circle size indicates number of MFIs.</div>\n<div style=\"font-size:60%;line-height:100%;margin-top:5px;color:#666;\">Source: <a href=\"http://www.cenbank.org/\">Central Bank of Nigeria</a></div>\n</div>"
+}
