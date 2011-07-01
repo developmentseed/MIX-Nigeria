@@ -1,0 +1,33 @@
+{
+  "_center": {
+    "lat": 8.885071663468969,
+    "lon": 7.448730468749995,
+    "zoom": 5
+  },
+  "_format": "png",
+  "_interactivity": {
+    "layer": "state-pop",
+    "key_name": "NAME_1",
+    "template_teaser": "<div class=\"interactivity\">\nState Name: [NAME_1]<br>\nPopulation (2006): [POP]\n</div>",
+    "template_full": "",
+    "template_location": ""
+  },
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "http://localhost:8889/api/Library/data/files/Nigeria-Population2006-shapefile.zip",
+        "type": "shape"
+      },
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "id": "state-pop",
+      "name": "state-pop",
+      "class": "",
+      "geometry": "polygon"
+    }
+  ],
+  "_legend": "<div class=\"legend\" style=\"font-size:80%;\">Nigeria Population by State (2006)</div>\n<div class=\"scale\">\n<ul style=\"list-style-type:none;display:inline;margin:0;padding:0;\">\n<li style=\"display:inline;background:#CBD9E6;height:25px; width:25px;\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li><li style=\"display:inline;background:#AEC3D9;height:25px; width:25px;\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li><li style=\"display:inline;background:#9EAEBF; height:25px; width:25px;\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li><li style=\"display:inline;background:#909AA3; height:25px; width:25px;\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>\n</ul>\n<div><span style=\"font-size:80%;\">&nbsp&nbsp&nbsp&#8804;3M&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span><span style=\"font-size:80%;\">3M-5M&nbsp&nbsp&nbsp&nbsp&nbsp</span><span style=\"font-size:80%;\">5M-7M&nbsp&nbsp</span><span style=\"font-size:80%;\">&nbsp&nbsp>7M</span></div>\n</div>\n<div style=\"font-size:60%;line-height:100%;margin-top:5px;color:#666;\">Source: <a href=\"http://www.nigerianstat.gov.ng/ext/latest_release/Abs2009.zip\">National Population Commission, Nigeria (2006)</a></div>"
+}
