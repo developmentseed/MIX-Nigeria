@@ -6,7 +6,7 @@ For help on Github, see here: <http://help.github.com/>
 
 ## To quickly make changes to front-end of the site, follow these steps:
 
-1. Click on the Index.html file in the website folder, located here: <https://github.com/developmentseed/MIX-Nigeria/blob/gh-pages/index.html>.  
+1. Click on the Index.html file in the `gh-pages` branch, located here: <https://github.com/developmentseed/MIX-Nigeria/blob/gh-pages/index.html>.  
 
 2. Enter edit mode by clicking on the 'Edit this file' button, located in the upper right corner of the file window.
 
