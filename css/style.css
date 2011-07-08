@@ -80,50 +80,6 @@ a.logoR {
   overflow:hidden;
   margin:5px 0px;
   }
-  
-/**
- * Legend
- */
-#legend {
-    z-index:2;
-    position:fixed;
-    left:10px;
-    bottom:35px;
-    width:215px;
-    height:195px;
-    background:url(../images/oti_legend2.png);
-    box:shadow::#999 2px 2px 5px;
-   -moz-box-shadow:#999 2px 2px 5px;
-   -webkit-box-shadow:#999 2px 2px 5px;
-   padding:10px;
-   font-size:12px;
-    }
-    
-ul.legend {
-    margin:10px;
-}
-    
-ul.legend li {
-    padding-top:10px;
-}
-
-.legcolor {
-    float:left;
-    width:35px;
-    height:20px;
-    margin-right:10px;
-    border:1px solid #999;
-}
-
-.footer {
-  font:13px/15px NewsGothic,Arial,sans-serif;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  background:url(../images/sprite.png) 0px -250px repeat-x;
-  padding:10px 15px;
-  height:30px;
-  }
 
 /**
  * About text and formatting
