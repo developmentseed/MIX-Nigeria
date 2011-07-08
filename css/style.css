@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6, p { margin:0px 0px 8px; }
   
 .layerswitch {
     position:fixed;
-    bottom:92px;
+    bottom:82px;
     right:0px;
     max-height:300px;
     width:360px;
@@ -209,7 +209,7 @@ ul.layers li a:active, ul.layers li a.active {
     position:fixed;
     bottom:21px;
     right:0px;
-    height:45px;
+    height:35px;
     width:340px;
     text-align:center;
     font-size:11px;
@@ -228,7 +228,6 @@ ul.layers li a:active, ul.layers li a.active {
 }
 
 .projectof {
-    font-weight:bold;
     font-style:italic;
     font-size:12px;
     }
@@ -301,6 +300,9 @@ h3 {
     top:82px !important;
 }
 
+/**
+ * Interaction
+ */
 .wax-tooltip {
     postition:fixed !important;
     max-width: 100% !important;
@@ -317,6 +319,9 @@ h3 {
     width: 100% !important;
 }
 
+/**
+ * Legend
+ */
 .wax-legends {
     position:fixed !important;
     left:10px !important;
