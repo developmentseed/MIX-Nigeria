@@ -173,14 +173,14 @@ ul.layers li a:active, ul.layers li a.active {
     padding:15px 10px 10px 10px;
     background:#ddd;
     border-top:1px solid #ccc;
-    border-left:2px solid #ccc;
+    border-left:1px solid #ccc;
 }
 
 .partL {
     float:left;
     text-align:right;
-    padding-left:16px;
-    line-height:14px;
+    padding-left:0px;
+    line-height:1px;
 }
 
 .projectof {
@@ -191,7 +191,7 @@ ul.layers li a:active, ul.layers li a.active {
 
 .partimg {
     float:right;
-    padding-right:25px;
+    padding-right:10px;
 }
 
 .tmlink {
