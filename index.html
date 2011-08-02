@@ -1,171 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset=utf-8 />
   <title>MIX | Microfinance in Nigeria</title>
-  <link rel="shortcut icon" href="images/mixmarket_favicon.ico" type="image/x-icon" />
-  
-   <script src='scripts/jquery-1.6.1.min.js' type='text/javascript'></script>
-   <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
-   <script src='scripts/wax.mm.min.js' type='text/javascript'></script>
-   <link href='css/controls.css' rel='stylesheet' type='text/css'/>
-   <link rel='stylesheet' href='css/reset.css' type='text/css'/>
-   <link rel='stylesheet' href='css/style.css' type='text/css'/>
+  <link rel='shortcut icon' href='images/mixmarket_favicon.ico' type='image/x-icon' />
+  <link href='css/controls.css' rel='stylesheet' type='text/css'/>
+  <link rel='stylesheet' href='css/reset.css' type='text/css'/>
+  <link rel='stylesheet' href='css/style.css' type='text/css'/>
 </head>
 
 <body>
-  <div class="top">
+  <div class='top'>
   </div>
   <div class='header'>
-    <div style="float:left;"><a href='http://www.themix.org' class='logoL'>Microfinance Information eXchange</a></div>
+    <div style='float:left;'><a href='http://www.themix.org' class='logoL'>Microfinance Information eXchange</a></div>
   </div>
-  
   <div class='about'>
       <h2>Microfinance in Nigeria</h2>
       <p>View the distribution of Microfinance Banks (MFBs) throughout Nigeria at the state and local level in the context of other social and economic factors.</p>
 	   <p class='more'>
-	   		<a href="http://www.mixmarket.org/mfi/country/Nigeria">&raquo; Learn more about microfinance in Nigeria here.</a>
+	   		<a href='http://www.mixmarket.org/mfi/country/Nigeria'>&raquo; Learn more about microfinance in Nigeria here.</a>
 	   </p>
-      <div class="layerswitch">
-        <div class="status-switch">
-          <label for="status-select">Select a License Status:</label>
-          <select id="status-select">
-            <option id="mix-nigeria-mfb-licensed">Licensed</option>
-            <option id="mix-nigeria-mfb-revoked">Revoked</option>
+      <div class='layerswitch'>
+        <div class='status-switch'>
+          <label for='status-select'>Select a License Status:</label>
+          <select id='status-select'>
+            <option id='mix-nigeria-mfb-licensed'>Licensed</option>
+            <option id='mix-nigeria-mfb-revoked'>Revoked</option>
           </select>
         </div>
-        <ul class="layers">
-        <li><a id="MIX_Nigeria_Population2006" href="#">Population</a></li>
-        <li><a id="MIX_Nigeria_InternetAccess" href="#">Internet Access</a></li>
-        <li><a id="MIX_Nigeria_MobileAccess" href="#">Mobile Access</a></li>
-        <li><a id="MIX_Nigeria_LiteracyRates" href="#">Literacy Rates</a></li>
-        <li><a id="MIX_Nigeria_Unemployment" href="#">Unemployment</a></li>
+        <ul class='layers'>
+          <li><a id='MIX_Nigeria_Population2006' href='#'>Population</a></li>
+          <li><a id='MIX_Nigeria_InternetAccess' href='#'>Internet Access</a></li>
+          <li><a id='MIX_Nigeria_MobileAccess' href='#'>Mobile Access</a></li>
+          <li><a id='MIX_Nigeria_LiteracyRates' href='#'>Literacy Rates</a></li>
+          <li><a id='MIX_Nigeria_Unemployment' href='#'>Unemployment</a></li>
         </ul>
      </div>
-      <div class="partners">
-        <div class="partL">
-          <span class="projectof">A project of:&nbsp;&nbsp;&nbsp;</span><br />
+      <div class='partners'>
+        <div class='partL'>
+          <span class='projectof'>A project of:</span><br />
 	     </div>
-	     <div class="partimg">
-	       <a href="http://www.mixmarket.org" target="_blank"><img src="images/logo_mix_bw2.png" alt="MIX" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.developmentseed.org"><img src="images/logo_ds_bw2.png" alt="development seed" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.mastercardfdn.org/"><img src="images/logo_mcf_bw.jpg" alt="MCF" /></a>
+	     <div class='partimg'>
+        <a href='http://www.mixmarket.org' target='_blank'>
+          <img src='images/logo_mix_bw2.png' alt='MIX' />
+        </a>
+        <a target='_blank' href='http://www.developmentseed.org'>
+          <img src='images/logo_ds_bw2.png' alt='development seed' />
+        </a>
+        <a target='_blank' href='http://www.mastercardfdn.org/'>
+          <img src='images/logo_mcf_bw.jpg' alt='MCF' />
+        </a>
 	     </div>
       </div>
-      <div class="tmlink">
+      <div class='tmlink'>
         Powered by open source <a target='_blank' href='http://tilemill.com'>TileMill</a></div>
+      </div>
+  <div id='map'></div>
+  <div id='controls'>
+    <a href='#' id='bwtoggle' class='hq control active'>HQ</a> 
   </div>
-  
-  <div id='map'>
-  </div>
-  
-  <script type="text/javascript">
-    //global vars
-    var m,
-    legend,
-    mm = com.modestmaps,
-    activeStatus = 'mix-nigeria-mfb-licensed',
-    activeLayer = 'MIX_Nigeria_Population2006',
-    layers = [
-    	'mapbox.world-blank-bright',
-        'world-urban-areas',
-        activeLayer,
-        'Nigeria-LGA-borders',
-        'mapbox.world-borders-dark',
-        'mix-nigeria-sharialine',
-        activeStatus].join(','),
-    url = 'http://a.tiles.mapbox.com/mix/1.0.0/' + layers + '/layer.json';
-    
-    function getTiles() { 
-	  return [
-	            "http://a.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://b.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://c.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://d.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg"
-	         ]
-	};
-	
-	function getGrids() { 
-	  return [
-	            "http://a.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://b.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://c.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://d.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json"
-	         ]
-	};
-	
-	function refreshMap() {
-		url = 'http://a.tiles.mapbox.com/mix/1.0.0/' + layers + '/layer.json';
-  		wax.tilejson(url, function(tilejson) {
-  			tilejson.minzoom = 4;
-	      	tilejson.maxzoom = 10;
-	      	tilejson.tiles = getTiles();
-	      	tilejson.grids = getGrids();
-	      	m.setProvider(new wax.mm.connector(tilejson));
-		    $('.wax-legends').remove(); 
-		    legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
-		});
-	}
-	
-	$(function (){
-		//build map
-		$('a#MIX_Nigeria_Population2006').addClass('active');
-	    wax.tilejson(url, function(tilejson) {
-	      tilejson.minzoom = 4;
-	      tilejson.maxzoom = 10;
-	      tilejson.tiles = getTiles();
-	      tilejson.grids = getGrids();
-	      
-	      m = new mm.Map('map',
-	        new wax.mm.connector(tilejson),
-	        null,
-	        [
-	          new mm.DragHandler,
-	          new mm.DoubleClickHandler,
-	          new mm.TouchHandler
-	        ]);
-	      wax.mm.interaction(m, tilejson);
-	      wax.mm.zoomer(m, tilejson).appendTo(m.parent);
-	      legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
-	      wax.mm.zoombox(m, tilejson);
-	      
-	      m.setCenterZoom(new mm.Location(9.5, 12), 6);
-	    });
-	    
-	    //contextual layer switching
-	    $('.layers li a').click(function() {
-	    	activeLayer = this.id;
-	    	$('.layers li a').removeClass('active');
-      		$(this).addClass('active');
-	    	layers = [
-            	'mapbox.world-blank-bright',
-              	'world-urban-areas',
-              	activeLayer,
-              	'Nigeria-LGA-borders',
-              	'mapbox.world-borders-dark',
-              	'mix-nigeria-sharialine',
-              	activeStatus
-            ].join(',');
-            
-            refreshMap();
-        });
-        
-        //point data selector
-        $('#status-select').change(function() {
-        	activeStatus = $('#status-select option:selected')[0].id;
-        	layers = [
-            	'mapbox.world-blank-bright',
-              	'world-urban-areas',
-              	activeLayer,
-              	'Nigeria-LGA-borders',
-              	'mapbox.world-borders-dark',
-              	'mix-nigeria-sharialine',
-              	activeStatus
-            ].join(',');
-            
-            refreshMap();
-        });
-	});
-  </script>
+  <script src='scripts/jquery-1.6.1.min.js'></script>
+  <script src='scripts/modestmaps.min.js'></script>
+  <script src='scripts/wax.mm.min.js'></script>
+  <script src='scripts/app.js'></script>
 </body>
 </html>
