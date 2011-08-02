@@ -305,7 +305,7 @@ ul.layers li a.active {
   max-height: 400px;
   padding: 10px;
   border: 1px solid #ccc;
-  background: transparent url(http://tiles.mapbox.com/assets/tilestream/images/mask.png) repeat;
+  background: transparent url(../images/mask.png) repeat;
   overflow: auto;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -335,9 +335,9 @@ ul.layers li a.active {
   border: 1px solid #ccc;
   }
 #bwtoggle.active {
-  background-color: #356AA3;
+  background-color: #45A6CF;
   color: #fff;
-  border-color: #356AA3;
+  border-color: #45A6CF;
   opacity: 0.90;
   -moz-opacity: 0.90;
   filter: alpha(opacity=90);
@@ -366,7 +366,7 @@ ul.layers li a.active {
   left: 70px;
   }
 a.embed {
-  background: #356AA3 url(../images/sprite.png) no-repeat -576px 4px;
+  background: #45A6CF url(../images/sprite.png) no-repeat -576px 4px;
   left: -60px;
   z-index: 4;
   -moz-border-radius: 3px;
@@ -374,7 +374,7 @@ a.embed {
   border-radius: 3px;
   display: block;
   position: absolute;
-  border: 1px solid #356AA3;
+  border: 1px solid #45A6CF;
   width: 28px;
   height: 28px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
