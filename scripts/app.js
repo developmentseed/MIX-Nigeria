@@ -103,7 +103,7 @@ $(function (){
       'mix-nigeria-sharialine',
       activeStatus
     ].join(',');
-  
+
     refreshMap();
   });
 
@@ -119,7 +119,50 @@ $(function (){
       'mix-nigeria-sharialine',
       activeStatus
     ].join(',');
-  
+
     refreshMap();
+  });
+
+  // Update and show embed script
+  $('a.embed').click(function (e) {
+    e.preventDefault();
+
+    var splitLayers = layers.split(','),
+        embedlayers = '',
+        center = m.pointLocation(new mm.Point(m.dimensions.x/2,m.dimensions.y/2));
+
+    $.each(splitLayers, function(num, key) {
+      embedlayers += '&amp;layers%5B%5D=' + key;
+    });
+
+    var embedId = 'ts-embed-' + (+new Date());
+    var url = '&amp;size=700'
+            + '&amp;size%5B%5D=550'
+            + '&amp;center%5B%5D=' + center.lon
+            + '&amp;center%5B%5D=' + center.lat
+            + '&amp;center%5B%5D=' + 6
+            + embedlayers
+            + '&amp;options%5B%5D=zoomwheel'
+            + '&amp;options%5B%5D=legend'
+            + '&amp;options%5B%5D=tooltips'
+            + '&amp;options%5B%5D=zoombox'
+            + '&amp;options%5B%5D=zoompan'
+            + '&amp;options%5B%5D=attribution'
+            + '&amp;el=' + embedId;
+
+    $('.tip input').attr('value', "<div id='"
+      + embedId
+      + "-script'><script src='http://tiles.mapbox.com/mix/api/v1/embed.js?api=mm"
+      + url
+      + "'></script></div>");
+
+    if ($('#embed').hasClass('active')) {
+      $('#embed').removeClass('active');
+    } else {
+      $('#embed').addClass('active');
+      $('#embed-code')[0].tabindex = 0;
+      $('#embed-code')[0].focus();
+      $('#embed-code')[0].select();
+    }
   });
 });

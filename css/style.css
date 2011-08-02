@@ -1,7 +1,6 @@
 body {
   font: 16px/20px Arial,sans-serif;
   color: #222;
-  background: #ccc;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -25,23 +24,34 @@ a {
   font-weight: bold;
   text-decoration: none;
   }
+a.icon,
 a.logoL {
   display: block;
   width: 290px;
   height: 40px;
-  background: url(../images/mix_logo_new.png) 0px 0px no-repeat;
+  background: url(../images/sprite.png) no-repeat 0 -50px;
   text-indent: -9999px;
-  overflow: hidden;
-  margin: 1px 0px;
   }
-a.logoR {
-  display: block;
-  width: 83px;
-  height: 50px;
-  background: url(../images/logo_mc.png) 0px 0px no-repeat;
-  text-indent: -9999px;
-  overflow: hidden;
-  margin: 5px 0px;
+a.mix {
+  background-position: -253px 0;
+  width: 84px;
+  height: 35px;
+  }
+a.ds {
+  background-position: 0 0;
+  width: 110px;
+  height: 35px;
+  }
+a.mc {
+  background-position: -180px 0;
+  width: 60px;
+  height: 40px;
+  }
+input[type='textfield'] {
+  border: 1px solid #ccc;
+  -moz-box-shadow:inset 0px 0px 3px #ccc;
+  -webkit-box-shadow:inset 0px 0px 3px #ccc;
+  box-shadow:inset 0px 0px 3px #ccc;
   }
 
 /**
@@ -57,7 +67,7 @@ a.logoR {
   top: 0px;
   left: 0px;
   right: 0px;
-  background: url(../images/mixsprite.png) 0px -190px repeat-x;
+  background: url(../images/sprite.png) 0px -160px repeat-x;
   height: 30px;
   z-index: 3;
   }
@@ -178,6 +188,7 @@ ul.layers li a.active {
   }
 .partimg a {
   margin-left: 5px;
+  float: left;
   }
 .tmlink {
   position: fixed;
@@ -207,7 +218,8 @@ ul.layers li a.active {
   }
 
 #map {
-  position: fixed !important;
+  background: white url(../images/bg.png);
+  position: absolute;
   height: 100%;
   top: 0px;
   left: 0px;
@@ -291,7 +303,7 @@ ul.layers li a.active {
   min-width: 180px;
   max-width: 280px;
   max-height: 400px;
-  padding: 4px 9px;
+  padding: 10px;
   border: 1px solid #ccc;
   background: transparent url(http://tiles.mapbox.com/assets/tilestream/images/mask.png) repeat;
   overflow: auto;
@@ -316,10 +328,10 @@ ul.layers li a.active {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   text-align: center;
-  line-height: 32px;
+  line-height: 30px;
   border: 1px solid #ccc;
   }
 #bwtoggle.active {
@@ -329,4 +341,89 @@ ul.layers li a.active {
   opacity: 0.90;
   -moz-opacity: 0.90;
   filter: alpha(opacity=90);
+  }
+/*CSS Animations*/
+.map-tile-loaded {
+  -webkit-animation-name: 'fade-in';
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: .1s;
+  }
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    }
+  to {
+    opacity: 1;
+    }
+  }
+/*Embed Code*/
+#embed {
+  position: absolute;
+  width: 105px;
+  height: 100px;
+  z-index: 4;
+  top: 190px;
+  left: 70px;
+  }
+a.embed {
+  background: #356AA3 url(../images/sprite.png) no-repeat -576px 4px;
+  left: -60px;
+  z-index: 4;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  border: 1px solid #356AA3;
+  width: 28px;
+  height: 28px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 30px;
+  opacity: 0.90;
+  -moz-opacity: 0.90;
+  filter: alpha(opacity=90);
+  }
+#embed.active a.embed {
+  box-shadow: inset rgba(0,0,0,0.5) 0 0 8px;
+  -moz-box-shadow: inset rgba(0,0,0,0.5) 0 0 8px;
+  -webkit-box-shadow: inset rgba(0,0,0,0.5) 0 0 8px;
+  }
+.tip {
+  display: none;
+  position: absolute;
+  width: 140px;
+  left: 50%;
+  margin-left: -70px;
+  z-index: 4;
+  bottom: 10px;
+  }
+.tip .inner {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  word-wrap: break-word;
+  -moz-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.10);
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.10);
+  }
+.tip span.point {
+  display: block;
+  width: 13px;
+  height: 43px;
+  background: transparent url(../images/sprite.png) no-repeat 0 -100px;
+  z-index: 1;
+  position: absolute;
+  top: 78px;
+  left: -10px;
+  }
+.tip input {
+  width: 110px;
+  margin-bottom: 5px;
+  }
+.active .tip {
+  display: block;
   }

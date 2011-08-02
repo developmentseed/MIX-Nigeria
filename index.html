@@ -42,15 +42,9 @@
           <span class='projectof'>A project of:</span><br />
 	     </div>
 	     <div class='partimg'>
-        <a href='http://www.mixmarket.org' target='_blank'>
-          <img src='images/logo_mix_bw2.png' alt='MIX' />
-        </a>
-        <a target='_blank' href='http://www.developmentseed.org'>
-          <img src='images/logo_ds_bw2.png' alt='development seed' />
-        </a>
-        <a target='_blank' href='http://www.mastercardfdn.org/'>
-          <img src='images/logo_mcf_bw.jpg' alt='MCF' />
-        </a>
+        <a href='http://www.mixmarket.org' target='_blank' class='icon mix'></a>
+        <a target='_blank' href='http://www.developmentseed.org' class='icon ds'></a>
+        <a target='_blank' href='http://www.mastercardfdn.org/' class='icon mc'></a>
 	     </div>
       </div>
       <div class='tmlink'>
@@ -58,7 +52,17 @@
       </div>
   <div id='map'></div>
   <div id='controls'>
-    <a href='#' id='bwtoggle' class='hq control active'>HQ</a> 
+    <a href='#' id='bwtoggle' class='hq control active'>HQ</a>
+    <div id='embed'>
+      <a href='#' class='embed control'></a>
+      <div class='tip'>
+        <div class='inner'>
+          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
+          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
+        </div>
+        <span class='point'></span>
+      </div>
+    </div>
   </div>
   <script src='scripts/jquery-1.6.1.min.js'></script>
   <script src='scripts/modestmaps.min.js'></script>
