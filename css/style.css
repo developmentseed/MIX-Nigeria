@@ -233,16 +233,16 @@ ul.layers li a.active {
   }
 .zoomin {
   background-position: -31px -1px;
-  left: 39px;
-  border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
   }
 .zoomout {
+  top: 109px;
   background-position: -61px -1px;
-  border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
   }
 .zoomer:active {
   margin-top: 1px;
@@ -304,26 +304,29 @@ ul.layers li a.active {
   }
 /*Bandwidth detector*/
 #bwtoggle {
+  background-color: #fff;
+  color: #ccc;
   font-size: 13px;
   font-weight: bold;
-  width: 20px;
-  height: 19px;
-  padding: 3px 5px;
-  color: #fff;
   position: absolute;
-  top: 120px;
   left: 10px;
+  top: 150px;
   z-index: 4;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  background: #282828;
-  opacity: 0.35;
-  -moz-opacity: 0.35;
-  filter: alpha(opacity=35);
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid #ccc;
   }
 #bwtoggle.active {
-  opacity: 0.75;
-  -moz-opacity: 0.75;
-  filter: alpha(opacity=75);
+  background-color: #356AA3;
+  color: #fff;
+  border-color: #356AA3;
+  opacity: 0.90;
+  -moz-opacity: 0.90;
+  filter: alpha(opacity=90);
   }

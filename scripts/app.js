@@ -1,5 +1,6 @@
 var m,
     legend,
+    level,
     mm           = com.modestmaps,
     activeStatus = 'mix-nigeria-mfb-licensed',
     activeLayer  = 'MIX_Nigeria_Population2006',
@@ -46,7 +47,8 @@ wax.tilejson(url, function(tilejson) {
         new mm.TouchHandler
       ]
   );
-  m.setCenterZoom(new mm.Location(9.5, 12), 6);
+  screen.width >= 1920 ? level = 7 : level = 6
+  m.setCenterZoom(new mm.Location(9.5, 12), level);
   wax.mm.interaction(m, tilejson);
   legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
   wax.mm.zoomer(m, tilejson).appendTo($('#controls')[0]);
