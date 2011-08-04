@@ -1,5 +1,6 @@
 var m,
     legend,
+    interaction,
     level,
     mm           = com.modestmaps,
     activeStatus = 'mix-nigeria-mfb-licensed',
@@ -49,7 +50,7 @@ wax.tilejson(url, function(tilejson) {
   );
   screen.width >= 1920 ? level = 7 : level = 6
   m.setCenterZoom(new mm.Location(9.5, 12), level);
-  wax.mm.interaction(m, tilejson);
+  interaction = wax.mm.interaction(m, tilejson);
   legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
   wax.mm.zoomer(m, tilejson).appendTo($('#controls')[0]);
   wax.mm.zoombox(m, tilejson);
@@ -82,6 +83,7 @@ function refreshMap() {
     m.setProvider(new wax.mm.connector(tilejson));
     $('.wax-legends').remove();
     legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
+    interaction = wax.mm.interaction(m, tilejson);
   });
 }
 

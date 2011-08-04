@@ -314,6 +314,9 @@ ul.layers li a.active {
   -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
   -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
   }
+.wax-tooltip {
+  background: #fff;
+  }
 /*Bandwidth detector*/
 #bwtoggle {
   background-color: #fff;
@@ -362,7 +365,7 @@ ul.layers li a.active {
   width: 105px;
   height: 100px;
   z-index: 4;
-  top: 190px;
+  top: 185px;
   left: 70px;
   }
 a.embed {
