@@ -82,6 +82,7 @@ function refreshMap() {
     tilejson.grids = getGrids();
     m.setProvider(new wax.mm.connector(tilejson));
     $('.wax-legends').remove();
+    interaction.remove();
     legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
     interaction = wax.mm.interaction(m, tilejson);
   });
